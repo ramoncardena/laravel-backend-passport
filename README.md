@@ -33,9 +33,14 @@ Execute the following commands to initialize your app:
 ```
 #> sail composer install
 #> sail artisan key:generate
+
+#> sail artisan passport:install
+#> sail artisan passport:keys
+
 #> sail artisan cache:clear
 #> sail artisan config:clear
 #> sail artisan optimize
+
 #> sail artisan migrate
 ```
 
