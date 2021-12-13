@@ -76,10 +76,15 @@ Route::resource('portfolios', PortfolioController::class);
 Actions Handled By Portfolio Resource Controller:
 
 GET			/portfolios 		index		portfolios.index
+
 POST		/portfolios			store		portfolios.store
+
 GET			/portfolio/{id}		show		portfolios.show
+
 PUT/PATCH	/portfolio/{id}		update		portfolios.update
+
 DELETE		/portfolio/{id}		destroy		portfolios.destroy
+
 
 
 ## License
