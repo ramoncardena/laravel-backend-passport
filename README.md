@@ -39,7 +39,6 @@ Execute the following commands to initialize your app:
 #> sail artisan migrate
 
 #> sail artisan passport:install --force
-#> sail artisan passport:keys
 
 #> sail artisan cache:clear
 #> sail artisan config:clear
