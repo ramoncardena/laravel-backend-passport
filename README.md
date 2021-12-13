@@ -20,6 +20,10 @@ Move to you new folder:
 
 `#> cd my-project-fodlder`
 
+Install composer packages:
+
+`#> composer install`
+
 Launch Sail:
 
 `#> sail up`
@@ -31,17 +35,16 @@ Remember to create and update your `.env` file
 Execute the following commands to initialize your app:
 
 ```
-#> sail composer install
 #> sail artisan key:generate
+#> sail artisan migrate
 
-#> sail artisan passport:install
+#> sail artisan passport:install --force
 #> sail artisan passport:keys
 
 #> sail artisan cache:clear
 #> sail artisan config:clear
 #> sail artisan optimize
 
-#> sail artisan migrate
 ```
 
 
