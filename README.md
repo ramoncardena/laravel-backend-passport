@@ -14,16 +14,31 @@ Laravel Passport provides a full OAuth2 server implementation for your Laravel a
 ## Installation
 Clone the respository to your local folder:
 
-```git clone git@github.com:ramoncardena/laravel-backend-passport.git my-project-folder```
+```#> git clone git@github.com:ramoncardena/laravel-backend-passport.git my-project-folder```
 
 Move to you new folder:
-`#cd my-project-fodlder`
+
+`#> cd my-project-fodlder`
 
 Launch Sail:
-`#sail up`
+
+`#> sail up`
 
 
 ## Initialization
+Remember to create and update your `.env` file
+
+Execute the following commands to initialize your app:
+
+```
+#> sail composer install
+#> sail artisan key:generate
+#> sail artisan cache:clear
+#> sail artisan config:clear
+#> sail artisan optimize
+#> sail artisan migrate
+```
+
 
 ## License
 
