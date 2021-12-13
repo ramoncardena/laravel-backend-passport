@@ -40,6 +40,53 @@ Execute the following commands to initialize your app:
 ```
 
 
+## Data Model
+The project comes with an example `Portfolio` model.
+
+The model has just 2 fields: `name` and `description`.
+
+You can Create, Retrieve, Update and Delete portfolios with the corresponding HTTP requests.
+
+## Routes
+You have the following routes available for **users**.
+
+Unauthenticated:
+
+```
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
+```
+
+Authenticated:
+
+```
+Route::get('/', [AuthController::class, 'user']);
+Route::get('logout', [AuthController::class, 'logout']);
+```
+
+
+You have the following routes available for **portfolios**.
+
+Authenticated:
+
+```
+Route::resource('portfolios', PortfolioController::class);
+```
+
+Actions Handled By Portfolio Resource Controller:
+
+GET			/portfolios 		index		portfolios.index
+
+POST		/portfolios			store		portfolios.store
+
+GET			/portfolio/{id}		show		portfolios.show
+
+PUT/PATCH	/portfolio/{id}		update		portfolios.update
+
+DELETE		/portfolio/{id}		destroy		portfolios.destroy
+
+
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
